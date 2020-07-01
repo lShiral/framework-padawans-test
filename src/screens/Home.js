@@ -1,16 +1,36 @@
-<!DOCTYPE html>
-<html lang pt_br>
+import React from 'react'
+import {Link} from "react-router-dom";
 
-<head>
-  <meta charset="UTF-8">
-  <title>Teste Framework</title>
-</head>
 
-<body>
- <header>
-   <img src="icones/icons8-sabre-de-luz-50.png" alt="sabre de luz">
-   Home
- </header>
-</body>
+const Home = () => {
+  return (
 
-</html>
+    <div className="container">
+      
+        <Link to="/postagens">
+          <div className="box">
+            <img src={require('../assets/icons/post.png')} />
+           Postagens
+          </div></Link>
+      
+        <Link to="/albums">
+      <div className="box">
+        <img src={require('../assets/icons/album.png')} />
+        Albuns
+      </div></Link>
+
+        <Link to="/todos">
+      <div className="box">
+        <img src={require('../assets/icons/todo.png')} />
+        To-dos
+      </div></Link>
+    </div>
+
+
+
+
+
+  )
+}
+
+export default Home

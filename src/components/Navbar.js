@@ -1,15 +1,26 @@
 import React from 'react'
+import {Link} from 'react-router-dom';
+
 
 const Navbar = () => {
     return(
-    // Aqui vai seu HTML
-    <head>
-      <title>Teste Framework</title>
-    </head>
-    <body>
-      <h1>Testando palavras com acento</h1>
-      <p>cão , pão . mãe , mão , paralelepípedo</p>
-    </body>
+      <nav>
+          <ul>
+            <li>
+              <Link to="/postagens">Postagens</Link>
+            </li>
+            <li>
+              <Link to="/albums">Albuns</Link>
+            </li>
+            <li>
+              <Link to="/todos">To-dos</Link>
+            </li>
+            <li>
+              <Link to="/home">Home</Link>
+            </li>
+          </ul>
+        </nav>
+  
     )
 }
 
