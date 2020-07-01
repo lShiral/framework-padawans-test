@@ -1,6 +1,6 @@
 .container {
   display:flex;
-  justify-content: center;
+  justify-content: center; 
 }
 
 .container a { /* link do react-doom renderiza um <a> , box ta dentro do a*/ 
@@ -30,7 +30,7 @@
   justify-content: center; 
   align-items: center;    
   flex-direction: column;
-  transition: all 0.2s;   
+  transition: all 0.1s;   
 }
 
 .box:hover {
@@ -47,16 +47,50 @@ border-collapse: collapse;  /*faz o encontro das bordas que estão pertinhas */
 }
 
 thead tr{
-background-color: black;
+background-color: #5f3473;
 color: white;
 text-align: left;
 }
 
 td , th {
-border: 2px solid gray;
+border: 2px solid #864ea0;
 padding: 5px;
 }
 
 tr:nth-child(even) {
-  background-color: #cccccc;
+  background-color: #f7c893;
   }
+
+  .navBar {
+
+    background-color: #ff9f4e;
+    width: 100vw;
+    height: 50px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    
+    text-decoration: none;
+    color: #5f3473;
+    font-weight: bold;
+  }
+
+  .navBar div {
+    margin-left: 30px;
+    padding-right: 10px;
+     
+  }
+
+  .navigationSpace a {
+    margin: 0px 10px;
+  }
+
+ 
+
+ 
+  
+  
+
+  
+  
