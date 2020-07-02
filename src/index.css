@@ -5,6 +5,9 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  height: 100vh;
+  background: #f0f0f5;
+  overflow-x: hidden; /* tira a barra de rolagem que fica em baixo do site*/
 }
 
 code {

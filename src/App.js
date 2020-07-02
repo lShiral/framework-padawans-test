@@ -16,6 +16,7 @@ const App = () => {
     <Router>
       <Navbar></Navbar>
       <Switch>
+        {/* path="/" Vai redirecionar pro Home */}
         <Route path="/postagens">
           <Posts></Posts>
         </Route>
@@ -25,7 +26,6 @@ const App = () => {
         <Route path="/todos">
           <Todos></Todos>
         </Route>
-        {/* path="/" Vai redirecionar pro Home */}
         <Route path="/home">
           <Home />
         </Route>
