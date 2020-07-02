@@ -5,7 +5,7 @@ const Navbar = () => {
   return (
     <nav className="navBar">
 
-      <Link to="/home">Home </Link>
+      <Link to="/">Home </Link> {/*colocando to="/" aqui e no App.js assim que abrir a página ela já vai estar em Home, sem precisar clicar no Menu */}
 
       <div className="navigationSpace">
         <Link to="/postagens">

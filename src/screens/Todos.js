@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
+import DataTable from "../components/DataTable";
 
 const Todos = () => {
 
@@ -8,42 +9,19 @@ const Todos = () => {
 
     axios.get("https://jsonplaceholder.typicode.com/todos").then((data) => {
 
-      console.log(data)
       setTodos(data.data)
 
     })
 
   }, [])
 
+  const headers = ["ID do usuário", "ID", "Título", "Conteúdo"]
+
   return (
-
     <div className="table-container">
-      <table>
-        <thead>
-          <tr>
-            <th>ID do usuário</th>
-            <th>ID</th>
-            <th>Título</th>
-            <th>Completo?</th>
-          </tr>
-        </thead>
-
-        <tbody>
-          {todos.map((todo) => {
-            return (
-              <tr>
-                <td>{todo.userId}</td>
-                <td>{todo.id}</td>
-                <td>{todo.title}</td>
-                <td>{todo.completed ? 'Sim' : 'Não'}</td>
-              </tr>
-            )
-          })}
-
-        </tbody>
-      </table>
+      <DataTable headers={headers} data={todos}></DataTable>
     </div>
-  )
-}
+  );
+};
 
 export default Todos

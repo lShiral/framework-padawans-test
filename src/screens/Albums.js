@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
+import DataTable from "../components/DataTable";
 
 const Albums = () => {
 
@@ -15,31 +16,14 @@ const Albums = () => {
 
   }, [])
 
+  const headers = ["ID do usuário", "ID", "Título"];
+
   return (
     <div className="table-container">
-      <table>
-        <thead>
-          <tr>
-            <th>ID do usuário</th>
-            <th>ID</th>
-            <th>Título</th>
-          </tr>
-        </thead>
-
-        <tbody>
-          {albums.map((album) => {
-            return (
-              <tr>
-                <td>{album.userId}</td>
-                <td>{album.id}</td>
-                <td>{album.title}</td>
-              </tr>)
-          })}
-
-        </tbody>
-      </table>
+      <DataTable headers={headers} data={albums}></DataTable>
     </div>
-  )
-}
+  );
+};
+
 
 export default Albums
